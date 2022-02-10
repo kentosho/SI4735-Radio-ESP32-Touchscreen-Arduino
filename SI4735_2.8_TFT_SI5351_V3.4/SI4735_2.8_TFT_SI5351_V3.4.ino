@@ -656,7 +656,7 @@ typedef struct // Band data
 
 //   Band table
 Band band[] = {
-  {   "FM", FM_BAND_TYPE,  FM,  8750, 10800,  8930, 10, 0, 0}, //  FM          0         
+  {   "FM", FM_BAND_TYPE,  FM,  6400, 10800,  8000, 10, 0, 0}, //  FM          0         
   {   "LW", LW_BAND_TYPE,  AM,   130,   279,   198,  9, 0, 0}, //  LW          1
   {   "MW", MW_BAND_TYPE,  AM,   522,  1701,  1395,  9, 0, 0}, //  MW          2
   {"BACON", LW_BAND_TYPE,  AM,   280,   470,   284,  1, 0, 0}, // Ham  600M    3
@@ -1094,7 +1094,7 @@ void setup() {
   x = y = 0;
   DrawFila();
   si4735.setSeekFmSpacing(10);
-  si4735.setSeekFmLimits(8750, 10800);
+  si4735.setSeekFmLimits(640, 10800);
   si4735.setSeekAmRssiThreshold(50);
   si4735.setSeekAmSrnThreshold(20);
   si4735.setSeekFmRssiThreshold(5);
